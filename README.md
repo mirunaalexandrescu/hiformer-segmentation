@@ -34,18 +34,6 @@ Input [B,1,224,224]
          └── Decoder → SegHead → Output [B,9,224,224]
 ```
 
----
-
-## Dataset
-
-![Dataset Synapse](images/slice110.png)
-
-Il dataset Synapse multi-organ contiene scansioni CT addominali con annotazioni su 8 organi.
-- **Training**: 18 casi, 2211 slice 2D in formato `.npz`
-- **Test**: 12 volumi 3D in formato `.npy.h5`
-
----
-
 ## Risultati
 
 ![Training Summary](images/training_summary.png)
