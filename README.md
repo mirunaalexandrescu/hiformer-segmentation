@@ -17,7 +17,7 @@ Progetto per l'esame di **Deep Learning** — Università degli Studi di Firenze
 
 ## Architettura
 
-![Architettura HiFormer](images/Model_Overview.png)
+![Architettura HiFormer](images/Model Overview.png)
 
 HiFormer combina due encoder paralleli connessi tramite il modulo **DLF (Double-Level Fusion)**:
 
