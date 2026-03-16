@@ -17,6 +17,8 @@ Progetto per l'esame di **Deep Learning** — Università degli Studi di Firenze
 
 ## Architettura
 
+![Architettura HiFormer](images/Model_Overview.png)
+
 HiFormer combina due encoder paralleli connessi tramite il modulo **DLF (Double-Level Fusion)**:
 
 - **CNN encoder** — ResNet34 pretrained su ImageNet, adattato a input grayscale (1 canale)
@@ -34,7 +36,19 @@ Input [B,1,224,224]
 
 ---
 
+## Dataset
+
+![Dataset Synapse](images/slice110.png)
+
+Il dataset Synapse multi-organ contiene scansioni CT addominali con annotazioni su 8 organi.
+- **Training**: 18 casi, 2211 slice 2D in formato `.npz`
+- **Test**: 12 volumi 3D in formato `.npy.h5`
+
+---
+
 ## Risultati
+
+![Training Summary](images/training_summary.png)
 
 Valutazione su 12 volumi di test del dataset Synapse (8 organi + background).  
 Metriche: Dice Score ↑ e HD95 in mm ↓, calcolato con voxelspacing corretto.
