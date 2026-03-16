@@ -43,7 +43,7 @@ Metriche: Dice Score ↑ e HD95 in mm ↓, calcolato con voxelspacing corretto.
 | Pancreas | 0.6932 | 0.613 | 30.78 | 22.18 |
 | **Mean** | **0.704** | **0.804** | **26.10** | **14.70** |
 
-Training: 100 epoche (paper: 150). Il gap su Stomach e Gallbladder è attribuibile principalmente al minor numero di epoche — sono gli organi anatomicamente più variabili e che beneficiano di più da training più lungo.
+Training: 100 epoche (paper: 150). Il gap su Stomach e Gallbladder è attribuibile principalmente al minor numero di epoche. Sono gli organi anatomicamente più variabili e che beneficiano di più da training più lungo.
 
 ---
 
@@ -89,7 +89,7 @@ Il notebook è strutturato in sezioni:
 9. Modello completo
 10. Dataset Synapse
 11. Trainer
-12. **Avvio training** ← unica cella da non rieseguire se il checkpoint esiste già
+12. Avvio training
 13. Valutazione
 14. Visualizzazione predizioni
 15. Grafici risultati
