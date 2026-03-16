@@ -5,6 +5,14 @@ Progetto per l'esame di **Deep Learning** — Università degli Studi di Firenze
 
 > Heidari et al., *HiFormer: Hierarchical Multi-scale Representations Using Transformers for Medical Image Segmentation*, WACV 2023. [[paper]](https://arxiv.org/abs/2207.08518)
 
+## Highlights
+
+- Reimplementazione completa di **HiFormer-S** (WACV 2023)
+- Segmentazione multi-organo su dataset **Synapse CT**
+- Architettura dual-encoder: **ResNet34 + Swin Transformer**
+- Fusione tramite **DLF (Double-Level Fusion)** con cross-attention
+- Mean Dice: **0.704** su 8 organi
+- Pipeline completamente riproducibile su **Google Colab**
 ---
 
 ## Architettura
@@ -45,6 +53,23 @@ Metriche: Dice Score ↑ e HD95 in mm ↓, calcolato con voxelspacing corretto.
 
 Training: 100 epoche (paper: 150). Il gap su Stomach e Gallbladder è attribuibile principalmente al minor numero di epoche. Sono gli organi anatomicamente più variabili e che beneficiano di più da training più lungo.
 
+## Training Details
+
+Hardware:
+- GPU: NVIDIA A100 (Google Colab)
+- Batch size: 8
+
+Training:
+- Epochs: 100 (paper: 150)
+- Optimizer: AdamW
+- Learning rate: 1e-4
+- Scheduler: Cosine Annealing
+- Loss: Dice + CrossEntropy
+
+Data preprocessing:
+- Input size: 224×224
+- CT slice-wise training
+- Data augmentation: random rotation, flip
 ---
 
 ## Setup
